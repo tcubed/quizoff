@@ -1,0 +1,30 @@
+<h2>My Quizzers</h2>
+<ul class="quizzers">
+  <li *ngFor="let quizzer of quizzers">
+    <!--
+    [class.selected]="quizzer === selectedQuizzer"
+    (click)="onSelect(quizzer)">
+    <span class="badge">{{quizzer.id}}</span> {{quizzer.name}}
+    -->
+    <a routerLink="/detail/{{quizzer.id}}">
+      <span class="badge">{{quizzer.id}}</span> {{quizzer.name}}
+    </a>
+  </li>
+</ul>
+ 
+<!--
+<div *ngIf="selectedQuizzer">
+ 
+  <h2>{{selectedQuizzer.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedQuizzer.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedQuizzer.name" placeholder="name"/>
+    </label>
+  </div>
+ 
+</div>
+-->
+<!--
+<app-quizzer-detail [quizzer]="selectedQuizzer"></app-quizzer-detail>
+-->
