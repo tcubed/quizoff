@@ -1,4 +1,15 @@
 <h2>My Quizzers</h2>
+
+<div>
+  <label>Quizzer name:
+    <input #quizzerName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(quizzerName.value); quizzerName.value=''">
+    add
+  </button>
+</div>
+
 <ul class="quizzers">
   <li *ngFor="let quizzer of quizzers">
     <!--
@@ -9,6 +20,9 @@
     <a routerLink="/detail/{{quizzer.id}}">
       <span class="badge">{{quizzer.id}}</span> {{quizzer.name}}
     </a>
+
+    <button class="delete" title="delete quizzer"
+      (click)="delete(quizzer)">x</button>
   </li>
 </ul>
  

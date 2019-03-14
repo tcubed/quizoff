@@ -36,4 +36,18 @@ export class QuizzersComponent implements OnInit {
         .subscribe(quizzers => this.quizzers = quizzers);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.quizzerService.addQuizzer({ name } as Quizzer)
+      .subscribe(quizzer => {
+        this.quizzers.push(quizzer);
+      });
+  }
+
+  delete(quizzer: Quizzer): void {
+    this.quizzers = this.quizzers.filter(h => h !== quizzer);
+    this.quizzerService.deleteQuizzer(quizzer).subscribe();
+  }
+
 }

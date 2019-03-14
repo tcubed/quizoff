@@ -33,4 +33,8 @@ export class QuizzerDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.quizzerService.updateQuizzer(this.quizzer)
+      .subscribe(() => this.goBack());
+  }
 }
