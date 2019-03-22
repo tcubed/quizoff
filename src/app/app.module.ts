@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -11,6 +12,7 @@ import { QuizzersComponent } from './quizzers/quizzers.component';
 import { QuizzerDetailComponent } from './quizzer-detail/quizzer-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { QuizzerSearchComponent } from './quizzer-search/quizzer-search.component';
+import { QuizScoringComponent } from './quiz-scoring/quiz-scoring.component';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { QuizzerSearchComponent } from './quizzer-search/quizzer-search.componen
     QuizzerDetailComponent,
     QuizzerSearchComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    QuizScoringComponent
   ],
   imports: [
     BrowserModule,

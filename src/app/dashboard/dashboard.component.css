@@ -1,7 +1,8 @@
 /* DashboardComponent's private CSS styles */
 [class*='col-'] {
     float: left;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 20px;
   }
   [class*='col-']:last-of-type {
@@ -23,7 +24,7 @@
     position: relative;
   }
   .grid {
-    margin: 0;
+    margin: 0px;
   }
   .col-1-4 {
     width: 25%;
@@ -35,7 +36,7 @@
     max-height: 120px;
     min-width: 120px;
     background-color: #607d8b;
-    border-radius: 2px;
+    border-radius: 10px;
   }
   .module:hover {
     background-color: #eee;

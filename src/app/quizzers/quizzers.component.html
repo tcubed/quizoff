@@ -1,13 +1,22 @@
-<h2>My Quizzers</h2>
+<h2>Quizzer Admin</h2>
 
-<div>
+<div class="container">
   <label>Quizzer name:
-    <input #quizzerName />
+      <input #quizzerName class="form-control" />
   </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(quizzerName.value); quizzerName.value=''">
-    add
-  </button>
+
+  <div class="input-group mb-3">
+    <select class="custom-select" id="programSelect" aria-label="select program" #programSelect >
+      <option selected>WGL</option>
+    </select>
+    <select class="custom-select" id="divisionSelect" aria-label="select division" #divisionSelect>
+      <option selected>A</option>
+      <option >B</option>
+    </select>
+    <button (click)="add(quizzerName.value,programSelect.value,divisionSelect.value); quizzerName.value='';programSelect.value='WGL';divisionSelect.value='A'">
+        add
+    </button>
+  </div>
 </div>
 
 <ul class="quizzers">

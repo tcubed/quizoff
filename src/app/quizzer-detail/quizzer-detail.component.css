@@ -6,7 +6,7 @@ label {
     color: #607D8B;
     font-weight: bold;
   }
-  input {
+  input_old {
     height: 2em;
     font-size: 1em;
     padding-left: .4em;
@@ -28,4 +28,33 @@ label {
     background-color: #eee;
     color: #ccc;
     cursor: auto;
+  }
+
+  .custom-select {
+    max-width: 5em;
+    
+  }
+
+  #quizzerName {
+    min-width: 10em;
+  }
+
+
+  nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  nav a:visited, a:link {
+    color: #607d8b;
+  }
+  nav a:hover {
+    color: #039be5;
+    background-color: #cfd8dc;
+  }
+  nav a.active {
+    color: #039be5;
   }

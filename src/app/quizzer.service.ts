@@ -14,23 +14,42 @@ const httpOptions = {
 
 @Injectable({providedIn: 'root'})
 export class QuizzerService {
-  private quizzersUrl = 'api/quizzers';  // URL to web api
+  // private quizzersUrl = 'api/quizzers';  // URL to web api
+  private quizzersUrl = 'http://localhost/quizoff/quizoff-app/api';
+
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }
 
   /** GET quizzers from the server */
   getQuizzers(): Observable<Quizzer[]> {
+    /*
     return this.http.get<Quizzer[]>(this.quizzersUrl)
       .pipe(
         tap(_ => this.log('fetched quizzers')),
         catchError(this.handleError('getQuizzers', []))
       );
+    */
+
+    return this.http.get<Quizzer[]>(`${this.quizzersUrl}/getQuizzers`)
+    .pipe(
+      tap(_ => this.log('fetched quizzers')),
+      catchError(this.handleError<Quizzer[]>('getQuizzers', []))
+    );
+    /*
+      .pipe(
+        map((res) => {
+          this.quizzers=res;
+          return this.quizzersUrl;
+        }),
+        catchError(this.handleError('getQuizzers', []))
+      );
+      */
   }
 
   /** GET quizzer by id. Return `undefined` when id not found */
   getQuizzerNo404<Data>(id: number): Observable<Quizzer> {
-    const url = `${this.quizzersUrl}/?id=${id}`;
+    const url = `${this.quizzersUrl}/user/${id}`;
     return this.http.get<Quizzer[]>(url)
       .pipe(
         map(quizzers => quizzers[0]), // returns a {0|1} element array
@@ -44,7 +63,8 @@ export class QuizzerService {
 
   /** GET quizzer by id. Will 404 if id not found */
   getQuizzer(id: number): Observable<Quizzer> {
-    const url = `${this.quizzersUrl}/${id}`;
+   // const url = `${this.quizzersUrl}/user/${id}/program/WGL/eventGroup/A`;
+    const url = `${this.quizzersUrl}/user/${id}`;
     return this.http.get<Quizzer>(url).pipe(
       tap(_ => this.log(`fetched quizzer id=${id}`)),
       catchError(this.handleError<Quizzer>(`getQuizzer id=${id}`))
@@ -67,7 +87,7 @@ export class QuizzerService {
 
   /** POST: add a new quizzer to the server */
   addQuizzer(quizzer: Quizzer): Observable<Quizzer> {
-    return this.http.post<Quizzer>(this.quizzersUrl, quizzer, httpOptions).pipe(
+    return this.http.post<Quizzer>(`${this.quizzersUrl}/user`, quizzer, httpOptions).pipe(
       tap((newQuizzer: Quizzer) => this.log(`added quizzer w/ id=${newQuizzer.id}`)),
       catchError(this.handleError<Quizzer>('addQuizzer'))
     );
@@ -76,7 +96,7 @@ export class QuizzerService {
   /** DELETE: delete the quizzer from the server */
   deleteQuizzer(quizzer: Quizzer | number): Observable<Quizzer> {
     const id = typeof quizzer === 'number' ? quizzer : quizzer.id;
-    const url = `${this.quizzersUrl}/${id}`;
+    const url = `${this.quizzersUrl}/deleteUser/${id}`;
 
     return this.http.delete<Quizzer>(url, httpOptions).pipe(
       tap(_ => this.log(`deleted quizzer id=${id}`)),
@@ -86,7 +106,10 @@ export class QuizzerService {
 
   /** PUT: update the quizzer on the server */
   updateQuizzer(quizzer: Quizzer): Observable<any> {
-    return this.http.put(this.quizzersUrl, quizzer, httpOptions).pipe(
+    // console.log(`${this.quizzersUrl}/updateUser`);
+    // console.log(quizzer);
+    // console.log(httpOptions);
+    return this.http.put(`${this.quizzersUrl}/updateUser`, quizzer, httpOptions).pipe(
       tap(_ => this.log(`updated quizzer id=${quizzer.id}`)),
       catchError(this.handleError<any>('updateQuizzer'))
     );
@@ -112,9 +135,9 @@ export class QuizzerService {
     };
   }
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a QuizzerService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`HeroService: ${message}`);
+    this.messageService.add(`QuizzService: ${message}`);
   }
 
   /*

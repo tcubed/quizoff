@@ -1,0 +1,38 @@
+<p>
+  quiz-scoring works!
+</p>
+
+<ul class="quizzers">
+    <li *ngFor="let quizzer of quizzers">
+      <!--
+      [class.selected]="quizzer === selectedQuizzer"
+      (click)="onSelect(quizzer)">
+      <span class="badge">{{quizzer.id}}</span> {{quizzer.name}}
+      
+      <a href="#">
+        <span class="badge">{{quizzer.id}}</span> {{quizzer.name}}
+      </a>
+  -->
+
+      <div class="quizzer">
+          {{quizzer.name}}
+      </div>
+
+      <div class="score">
+         {{quizzer.score}}
+      </div>
+
+      <button class="points" title="+10"
+        (click)="gainPoints(quizzer)">+10</button>
+      <button class="points" title="-10"
+        (click)="losePoints(quizzer)">-10</button>
+      <button class="points" title="reset points"
+        (click)="reset(quizzer)">Reset</button>
+      <button class="error" title="error"
+        (click)="error(quizzer)">Error</button>
+      <!--
+      <button class="delete" title="delete quizzer"
+        (click)="delete(quizzer)">x</button>
+        -->
+    </li>
+  </ul>

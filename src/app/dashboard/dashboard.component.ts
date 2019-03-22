@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
 
   getQuizzers(): void {
     this.quizzerService.getQuizzers()
-      .subscribe(quizzers => this.quizzers = quizzers.slice(1, 5));
+      .subscribe(quizzers => this.quizzers = quizzers);
+     // .subscribe(quizzers => this.quizzers = quizzers.slice(1, 5));
   }
 }

@@ -36,13 +36,14 @@ export class QuizzersComponent implements OnInit {
         .subscribe(quizzers => this.quizzers = quizzers);
   }
 
-  add(name: string): void {
+  add(name: string, program: string, eventGroup: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.quizzerService.addQuizzer({ name } as Quizzer)
-      .subscribe(quizzer => {
-        this.quizzers.push(quizzer);
-      });
+    this.quizzerService.addQuizzer({ name, program, eventGroup } as Quizzer)
+      // .subscribe(quizzer => {
+      //   this.quizzers.push(quizzer);
+      // });
+      .subscribe(() => this.getQuizzers());
   }
 
   delete(quizzer: Quizzer): void {
