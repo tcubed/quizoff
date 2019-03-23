@@ -1,3 +1,4 @@
+/*
 import { Quizzer } from './quizzer';
 
 export const QUIZZERS: Quizzer[] = [
@@ -12,3 +13,4 @@ export const QUIZZERS: Quizzer[] = [
   { id: 19, name: 'Jackson P' },
   { id: 20, name: 'Tornado' }
 ];
+*/
