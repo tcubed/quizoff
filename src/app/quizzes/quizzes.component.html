@@ -1,0 +1,36 @@
+<h2>Quiz Admin</h2>
+
+<div class="container">
+  <label>Quiz date:
+      <input #quizDate class="form-control" />
+  </label>
+
+  <div class="input-group mb-3">
+    <select class="custom-select" id="programSelect" aria-label="select program" #programSelect >
+      <option selected>WGL</option>
+    </select>
+    <select class="custom-select" id="divisionSelect" aria-label="select division" #divisionSelect>
+      <option selected>A</option>
+      <option >B</option>
+    </select>
+    <button (click)="add(quizDate.value,programSelect.value,divisionSelect.value); quizDate.value='';programSelect.value='WGL';divisionSelect.value='A'">
+        add
+    </button>
+  </div>
+</div>
+
+<ul class="quizzes">
+  <li *ngFor="let quiz of quizzes">
+    <!--
+    [class.selected]="quizzer === selectedQuizzer"
+    (click)="onSelect(quizzer)">
+    <span class="badge">{{quizzer.id}}</span> {{quizzer.name}}
+    -->
+    <a routerLink="/quiz/{{quiz.id}}">
+      <span class="badge">{{quiz.id}}</span> {{quiz.date}}, Div: {{quiz.eventGroup}}
+    </a>
+
+    <button class="delete" title="delete quiz"
+      (click)="delete(quiz)">x</button>
+  </li>
+</ul>

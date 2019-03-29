@@ -1,25 +1,12 @@
-<p>
-  quiz-scoring works!
-</p>
+<ul class="quizzes">
+    <li *ngFor="let quiz of quizzes">
 
-<ul class="quizzers">
-    <li *ngFor="let quizzer of quizzers">
-      <!--
-      [class.selected]="quizzer === selectedQuizzer"
-      (click)="onSelect(quizzer)">
-      <span class="badge">{{quizzer.id}}</span> {{quizzer.name}}
-      
-      <a href="#">
-        <span class="badge">{{quizzer.id}}</span> {{quizzer.name}}
-      </a>
-  -->
-
-      <div class="quizzer">
-          {{quizzer.name}}
+      <div class="quiz">
+          {{quiz.date}}
       </div>
 
       <div class="score">
-         {{quizzer.score}}
+         {{quiz.division}}
       </div>
 
       <button class="points" title="+10"

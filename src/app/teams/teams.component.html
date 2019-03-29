@@ -1,0 +1,36 @@
+<h2>Team Admin</h2>
+
+<div class="container">
+  <label>Team name:
+      <input #teamName class="form-control" />
+  </label>
+
+  <div class="input-group mb-3">
+    <select class="custom-select" id="programSelect" aria-label="select program" #programSelect >
+      <option selected>WGL</option>
+    </select>
+    <select class="custom-select" id="divisionSelect" aria-label="select division" #divisionSelect>
+      <option selected>A</option>
+      <option >B</option>
+    </select>
+    <button (click)="add(teamName.value,programSelect.value,divisionSelect.value); teamName.value='';programSelect.value='WGL';divisionSelect.value='A'">
+        add
+    </button>
+  </div>
+</div>
+
+<ul class="teams">
+  <li *ngFor="let team of teams">
+    <!--
+    [class.selected]="quizzer === selectedQuizzer"
+    (click)="onSelect(quizzer)">
+    <span class="badge">{{quizzer.id}}</span> {{quizzer.name}}
+    -->
+    <a routerLink="/teamDetail/{{team.id}}">
+      <span class="badge">{{team.id}}</span> {{team.name}}
+    </a>
+
+    <button class="delete" title="delete team"
+      (click)="delete(team)">x</button>
+  </li>
+</ul>

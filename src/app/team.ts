@@ -3,5 +3,6 @@ export class Team {
     name: string;
     program: string;
     eventGroup: string;
+    active: number;
     quizzers: [];
   }

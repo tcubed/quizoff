@@ -4,5 +4,6 @@ export class Quiz {
     quizNumber: number;
     program: string;
     eventGroup: string;
+    active: number;
     teams: [];
   }

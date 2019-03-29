@@ -8,11 +8,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MessagesComponent } from './messages/messages.component';
+
+// quizzer
 import { QuizzersComponent } from './quizzers/quizzers.component';
 import { QuizzerDetailComponent } from './quizzer-detail/quizzer-detail.component';
-import { MessagesComponent } from './messages/messages.component';
 import { QuizzerSearchComponent } from './quizzer-search/quizzer-search.component';
-import { QuizScoringComponent } from './quiz-scoring/quiz-scoring.component';
+
+// quiz
+import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+
+// team
+import { TeamsComponent } from './teams/teams.component';
 
 
 @NgModule({
@@ -23,7 +31,9 @@ import { QuizScoringComponent } from './quiz-scoring/quiz-scoring.component';
     QuizzerSearchComponent,
     MessagesComponent,
     DashboardComponent,
-    QuizScoringComponent
+    QuizDetailComponent,
+    QuizzesComponent,
+    TeamsComponent
   ],
   imports: [
     BrowserModule,
