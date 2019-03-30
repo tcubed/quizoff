@@ -47,6 +47,14 @@ export class QuizzerService {
       */
   }
 
+  getQuizzersAssoc(): Observable<Quizzer[]> {
+    return this.http.get<Quizzer[]>(`${this.quizzersUrl}/getQuizzersAssoc`)
+    .pipe(
+      tap(_ => this.log('fetched quizzers')),
+      catchError(this.handleError<Quizzer[]>('getQuizzers', []))
+    );
+  }
+
   /** GET quizzer by id. Return `undefined` when id not found */
   getQuizzerNo404<Data>(id: number): Observable<Quizzer> {
     const url = `${this.quizzersUrl}/user/${id}`;

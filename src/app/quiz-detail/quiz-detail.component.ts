@@ -1,9 +1,11 @@
-
-import { Component, OnInit } from '@angular/core';
-import { Quiz } from '../quiz';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
+import { Quiz } from '../quiz';
+import { Quizzer } from '../quizzer';
 import { QuizService } from '../quiz.service';
+import { QuizzerService } from '../quizzer.service';
 
 @Component({
   selector: 'app-quiz-detail',
@@ -12,25 +14,28 @@ import { QuizService } from '../quiz.service';
 })
 export class QuizDetailComponent implements OnInit {
   quiz: Quiz;
-  quizzes: Quiz[];
+  quizzers: Quizzer[];
 
   constructor(
+    private route: ActivatedRoute,
     private quizService: QuizService,
+    private quizzerService: QuizzerService,
     private location: Location
   ) {}
 
-  ngOnInit() {
-    this.getQuizzes();
+  ngOnInit(): void {
+    this.getQuiz();
+    this.getQuizzers();
   }
 
-  /*
-  onSelect(quiz: Quiz): void {
-    this.selectedQuiz = quiz;
+  getQuiz(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.quizService.getQuiz(id)
+        .subscribe(quiz => this.quiz = quiz);
   }
-  */
-  getQuizzes(): void {
-    this.quizService.getQuizzes()
-        .subscribe(quizzes => this.quizzes = quizzes);
+  getQuizzers(): void {
+    this.quizzerService.getQuizzers()
+        .subscribe(quizzers => this.quizzers = quizzers);
   }
 
   goBack(): void {

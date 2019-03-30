@@ -54,7 +54,7 @@ export class QuizService {
   }
 
   /* GET quizs whose name contains search term */
-  searchQuizs(term: string): Observable<Quiz[]> {
+  searchQuizzes(term: string): Observable<Quiz[]> {
     if (!term.trim()) {
       // if not search term, return empty quiz array.
       return of([]);

@@ -1,12 +1,13 @@
-<ul class="quizzes">
-    <li *ngFor="let quiz of quizzes">
+<ul class="quiz" *ngIf="quiz">
+  {{quiz}}
+    <li *ngFor="let team of quiz.teams">
 
       <div class="quiz">
-          {{quiz.date}}
+          {{team}}
       </div>
 
       <div class="score">
-         {{quiz.division}}
+         {{team}}
       </div>
 
       <button class="points" title="+10"

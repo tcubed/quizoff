@@ -1,0 +1,68 @@
+[
+    {
+        "id": 11,
+        "name": "Hope T",
+        "program": "WGL",
+        "eventGroup": "A"
+    },
+    {
+        "id": 12,
+        "name": "Hope H",
+        "program": "WGL",
+        "eventGroup": "A"
+    },
+    {
+        "id": 13,
+        "name": "Emily D",
+        "program": "WGL",
+        "eventGroup": "A"
+    },
+    {
+        "id": 14,
+        "name": "Grace T",
+        "program": "WGL",
+        "eventGroup": "A"
+    },
+    {
+        "id": 15,
+        "name": "Aliya S",
+        "program": "WGL",
+        "eventGroup": "A"
+    },
+    {
+        "id": 16,
+        "name": "Harleigh B",
+        "program": "WGL",
+        "eventGroup": "A"
+    },
+    {
+        "id": 17,
+        "name": "Jeffrey P",
+        "program": "WGL",
+        "eventGroup": "A"
+    },
+    {
+        "id": 18,
+        "name": "William S",
+        "program": "WGL",
+        "eventGroup": "A"
+    },
+    {
+        "id": 19,
+        "name": "Jackson P",
+        "program": "WGL",
+        "eventGroup": "A"
+    },
+    {
+        "id": 20,
+        "name": "Elijah F",
+        "program": "WGL",
+        "eventGroup": "A"
+    },
+    {
+        "name": "Clinton T",
+        "program": "WGL",
+        "eventGroup": "B",
+        "id": 21
+    }
+]

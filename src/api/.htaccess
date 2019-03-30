@@ -1,0 +1,50 @@
+
+
+<IfModule mod_rewrite.c>
+    # Set the headers for the restful api
+    
+    #Header always set Access-Control-Allow-Origin http://localhost:4200
+    #Header "HTTP/1.1 200 OK"
+    Header always set Access-Control-Allow-Origin *
+    Header always set Access-Control-Max-Age "1000"
+    Header always set Access-Control-Allow-Headers "X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding"
+    Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
+    
+
+    RewriteEngine On
+    #RewriteCond %{REQUEST_FILENAME} !-f
+    #RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+    RewriteRule	^getQuizzers/?$	api.php?request=getQuizzers	[NC,L]	# retrieve available quizzers
+    RewriteRule	^getQuizzersAssoc/?$	api.php?request=getQuizzersAssoc	[NC,L]	# retrieve available quizzers
+    RewriteRule	^getQuizzes/?$	api.php?request=getQuizzes	[NC,L]	# retrieve available quizzers
+    RewriteRule	^getTeams/?$	api.php?request=getTeams	[NC,L]	# retrieve available quizzers
+    
+    RewriteRule	^user/?$	api.php?request=addUser	[QSA,L]	# add user profile
+    RewriteRule	^quiz/?$	api.php?request=addQuiz	[QSA,L]	# add user profile
+    RewriteRule	^team/?$	api.php?request=addTeam	[QSA,L]	# add user profile
+
+    RewriteRule ^user/([a-z0-9]+)/?$   api.php?request=getUser&idUser=$1  [NC,L] # retrieve all of a users information based on the user id, program and eventgroup that are provided.
+    RewriteRule ^quiz/([a-z0-9]+)/?$   api.php?request=getQuiz&idQuiz=$1  [NC,L] # retrieve all of a users information based on the user id, program and eventgroup that are provided.
+    RewriteRule ^team/([a-z0-9]+)/?$   api.php?request=getTeam&idTeam=$1  [NC,L] # retrieve all of a users information based on the user id, program and eventgroup that are provided.
+    
+    RewriteRule ^deleteUser/([a-z0-9]+)/?$   api.php?request=deleteUser&idUser=$1  [NC,L] # retrieve all of a users information based on the user id, program and eventgroup that are provided.
+    RewriteRule ^deleteQuiz/([a-z0-9]+)/?$   api.php?request=deleteQuiz&idQuiz=$1  [NC,L] # retrieve all of a users information based on the user id, program and eventgroup that are provided.
+    RewriteRule ^deleteTeam/([a-z0-9]+)/?$   api.php?request=deleteTeam&idTeam=$1  [NC,L] # retrieve all of a users information based on the user id, program and eventgroup that are provided.
+    
+    RewriteRule ^updateUser/?$ api.php?request=updateUser  [NC,L]
+    RewriteRule ^updateQuiz/?$ api.php?request=updateQuiz  [NC,L]
+    RewriteRule ^updateTeam/?$ api.php?request=updateTeam  [NC,L]
+
+    #RewriteRule ^user/([a-z0-9]+)/program/([a-z0-9]+)/eventGroup/([a-z0-9]+)/?$   api.php?request=getUser&idUser=$1&idProgram=$2&idEventGroup=$3  [NC,L] # retrieve all of a users information based on the user id, program and eventgroup that are provided.
+   
+    #RewriteRule	^user/([a-z0-9]+)/programs/?$	api.php?request=userPrograms&userid=$1	[NC,L]	# retriever user program
+
+</IfModule>
+
+# Prevent Apache from serving .ht* files:
+
+<FilesMatch "^\.ht">
+Order allow,deny
+Deny from all
+</FilesMatch>

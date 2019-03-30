@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "date": "4/1/2019",
+        "quizNumber":1,
+        "question":"1",
+        "program": "WGL",
+        "eventGroup": "A",
+        "active": 1,
+        "teams": [{"team":1,"quizzers":[{"id":1,"score":20,"errors":0}]},
+                  {"team":2,"quizzers":[{"id":2,"score":20,"errors":0}]},
+                  {"team":3,"quizzers":[{"id":3,"score":20,"errors":0}]},
+                  {"team":4,"quizzers":[{"id":4,"score":20,"errors":0}]},
+                  {"team":5,"quizzers":[{"id":5,"score":20,"errors":0}]},
+                  {"team":6,"quizzers":[{"id":6,"score":20,"errors":0}]},
+                  {"team":7,"quizzers":[{"id":7,"score":20,"errors":0}]},
+                  {"team":8,"quizzers":[{"id":8,"score":20,"errors":0}]},
+                  {"team":9,"quizzers":[{"id":9,"score":20,"errors":0}]},
+                  {"team":10,"quizzers":[{"id":10,"score":20,"errors":0}]}]
+    }
+]
