@@ -18,9 +18,11 @@ import { QuizzerSearchComponent } from './quizzer-search/quizzer-search.componen
 // quiz
 import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
+import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 
 // team
 import { TeamsComponent } from './teams/teams.component';
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { TeamsComponent } from './teams/teams.component';
     DashboardComponent,
     QuizDetailComponent,
     QuizzesComponent,
-    TeamsComponent
+    TeamsComponent,
+    ScoreboardComponent
   ],
   imports: [
     BrowserModule,

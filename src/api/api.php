@@ -174,6 +174,19 @@ class API extends REST {
 
         $this->response(json_encode($ret),200);
     }
+    private function getAssocArrByKey($arr,$key="id"){
+        // Get the contents of the JSON file 
+        $ret=array();
+        $arrlength = count($arr);
+        for($x = 0; $x < $arrlength; $x++) {
+            $tmp=$arr[$x];
+            $val=$tmp[$key];
+            unset($tmp[$key]);
+            $ret[$val]=$tmp;
+        }
+        return $arr;
+    }
+
     private function getQuizzes(){
         // Get the contents of the JSON file 
         $quizzesData = file_get_contents("quizzes.json");
@@ -219,20 +232,42 @@ class API extends REST {
         }
 
         $idQuiz=$this->_request['idQuiz'];
-        $array = $this->readquizdb();
+        $quizzers = $this->readdb();
+        $teams = $this->readteamdb();
+        $quizzes = $this->readquizdb();
+
+        $Q=$this->getAssocArrByKey($quizzers,$key="id");
+        $T=$this->getAssocArrByKey($teams,$key="id");
 
         $ret=array();
-        $arrlength = count($array);
+        // loop through all quizzes
+        $arrlength = count($quizzes);
         for($x = 0; $x < $arrlength; $x++) {
-            $quiz=$array[$x];
-            // $tst=($user["id"]==$idUser & $user["program"]==$idProgram & $user["eventGroup"]==$idEventGroup);
+            $quiz=$quizzes[$x];
+            // if this is the requested quiz
             $tst=($quiz["id"]==$idQuiz);
-            if($tst>0){$ret[]=$quiz;break;}
+            if($tst>0){
+                $ret=$quiz;
+                $ret["msg"]="ack!";
+                // loop through all teams
+                $nteams=count($quiz["teams"]);
+                for($tt=0;$tt<$nteams;$tt++){
+                    $team=$quiz["teams"][$tt];
+                    $tid=$team["id"];
+                    $ret[$tt]["name"]=$T[$tid];
+                    // loop throuh all quizzers on team
+                    $nquizzer=count($team["quizzers"]);
+                    for($qq=0;$qq<$nquizzer;$qq++){
+
+                    }
+                }
+                //$ret[]=$quiz;
+                break;
+            }
         }
         if(count($ret)){
-            $this->response(json_encode($ret[0]),200);
+            $this->response(json_encode($ret),200);
         }
-        
     }
     private function getTeam(){
         if($this->get_request_method() != "GET") {

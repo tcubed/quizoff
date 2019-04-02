@@ -1,26 +1,42 @@
-<ul class="quiz" *ngIf="quiz">
-  {{quiz}}
-    <li *ngFor="let team of quiz.teams">
+<ul class="teams" *ngIf="quiz">
 
-      <div class="quiz">
-          {{team}}
-      </div>
+  <a routerLink="/scoreboard/{{quiz.id}}">
+    <span class="badge">Scoreboad for Quiz {{quiz.id}}</span>
+  </a>
 
-      <div class="score">
-         {{team}}
-      </div>
+  <li *ngFor="let team of quiz.teams; let ti = index">
 
-      <button class="points" title="+10"
-        (click)="gainPoints(quizzer)">+10</button>
-      <button class="points" title="-10"
-        (click)="losePoints(quizzer)">-10</button>
-      <button class="points" title="reset points"
-        (click)="reset(quizzer)">Reset</button>
-      <button class="error" title="error"
-        (click)="error(quizzer)">Error</button>
-      <!--
-      <button class="delete" title="delete quizzer"
-        (click)="delete(quizzer)">x</button>
-        -->
-    </li>
-  </ul>
+    <div class="teams">
+      Team: {{team.name}}
+    
+      <ul class="quizzers">
+        <li *ngFor="let quizzer of team.quizzers; let qzi = index ">
+          <div class="score0">
+            <span>
+              <strong>{{quizzer.name}}</strong> Score: {{quizzer.score}} Errors: {{quizzer.errors}}
+            </span>
+            <button class="points0" title="+10" (click)="updateScore((quiz.id),(ti),(qzi),10,0,0)">+10</button>
+            <button class="points0" title="-10" (click)="updateScore((quiz.id),(ti),(qzi),-10,0,0)">-10</button>
+            <button class="error0" title="+E" (click)="updateScore((quiz.id),(ti),(qzi),0,1,0)">+E</button>
+            <button class="error0" title="-E" (click)="updateScore((quiz.id),(ti),(qzi),0,-1,0)">-E</button>
+            
+           
+            <label class="checkbox-inline"><input #quizout type="checkbox" (change)="updateQuizout(quizout.checked,(quiz.id),(ti),(qzi))" [checked]="quizzer.quizout" value="">Quiz out</label>
+            <label class="checkbox-inline"><input #errorout type="checkbox" (change)="updateErrorout(errorout.checked,(quiz.id),(ti),(qzi))" [checked]="quizzer.errorout" value="">Error out</label> 
+            <button class="points0" title="reset points" (click)="updateScore((quiz.id),(ti),(qzi),0,0,1)">Reset</button>
+          </div>
+        </li>
+
+      </ul>
+
+      
+
+    </div>
+    <!--
+    <button class="delete" title="delete quizzer"
+      (click)="delete(quizzer)">x</button>
+      -->
+  </li>
+</ul>
+
+  

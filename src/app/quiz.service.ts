@@ -94,6 +94,15 @@ export class QuizService {
     );
   }
 
+  /*
+  updateScore(quiz: Quiz): Observable<any> {
+    return this.http.put(`${this.quizzesUrl}/updateScore`, quiz, httpOptions).pipe(
+      tap(_ => this.log(`updated quiz id=${quiz.id}`)),
+      catchError(this.handleError<any>('updateScore'))
+    );
+  }
+ */
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

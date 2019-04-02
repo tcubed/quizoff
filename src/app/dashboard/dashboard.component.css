@@ -23,6 +23,9 @@
   h4 {
     position: relative;
   }
+  img {
+    border-radius: 50%;
+  }
   .grid {
     margin: 0px;
   }
@@ -33,7 +36,7 @@
     padding: 20px;
     text-align: center;
     color: #eee;
-    max-height: 120px;
+    max-height: 200px;
     min-width: 120px;
     background-color: #607d8b;
     border-radius: 10px;

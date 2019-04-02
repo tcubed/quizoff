@@ -1,0 +1,24 @@
+<div *ngIf="quiz">
+
+    Quiz Date: {{quiz.date}}
+  <div class="grid grid-pad">
+    
+    <a *ngFor="let team of quiz.teams" class="col-1-4">
+      <!--
+      <a *ngFor="let team of quiz.teams" class="col-1-4" routerLink="/detail/{{quiz.id}}"></a>
+      -->
+        <div *ngFor="let quizzer of team.quizzers">
+          <!--<div class="module">-->
+          <div [ngClass]="{'module':quizzer.quizout==false,'quizout':quizzer.quizout==true,'errorout':quizzer.errorout==true}">
+
+
+            <h4>{{quizzer.name}}</h4>
+            <img [ngClass]="{'imgquizout':(quizzer.quizout==true)||(quizzer.errorout==true)}" src="assets/img/{{quizzer.img}}">
+            <div class="score">{{quizzer.score}}</div>
+            <div class="error" *ngIf="quizzer.errors>0">E: {{quizzer.errors}}</div>
+          </div>
+        </div>
+    </a>
+  </div>
+
+</div>
