@@ -16,7 +16,6 @@
     #RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
     RewriteRule	^getQuizzers/?$	api.php?request=getQuizzers	[NC,L]	# retrieve available quizzers
-    RewriteRule	^getQuizzersAssoc/?$	api.php?request=getQuizzersAssoc	[NC,L]	# retrieve available quizzers
     RewriteRule	^getQuizzes/?$	api.php?request=getQuizzes	[NC,L]	# retrieve available quizzers
     RewriteRule	^getTeams/?$	api.php?request=getTeams	[NC,L]	# retrieve available quizzers
     

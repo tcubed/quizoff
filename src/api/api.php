@@ -180,11 +180,11 @@ class API extends REST {
         $arrlength = count($arr);
         for($x = 0; $x < $arrlength; $x++) {
             $tmp=$arr[$x];
-            $val=$tmp[$key];
+            $keyval=$tmp[$key];
             unset($tmp[$key]);
-            $ret[$val]=$tmp;
+            $ret[$keyval]=$tmp;
         }
-        return $arr;
+        return $ret;
     }
 
     private function getQuizzes(){
@@ -248,25 +248,31 @@ class API extends REST {
             $tst=($quiz["id"]==$idQuiz);
             if($tst>0){
                 $ret=$quiz;
-                $ret["msg"]="ack!";
                 // loop through all teams
                 $nteams=count($quiz["teams"]);
                 for($tt=0;$tt<$nteams;$tt++){
                     $team=$quiz["teams"][$tt];
                     $tid=$team["id"];
-                    $ret[$tt]["name"]=$T[$tid];
+                    // assign team name
+                    $ret["teams"][$tt]["name"]=$T[$tid]["name"];
                     // loop throuh all quizzers on team
                     $nquizzer=count($team["quizzers"]);
                     for($qq=0;$qq<$nquizzer;$qq++){
-
+                        $quizzer=$team["quizzers"][$qq];
+                        $qid=$quizzer["id"];
+                        $ret["teams"][$tt]["quizzers"][$qq]["name"]=$Q[$qid]["name"];
+                        $ret["teams"][$tt]["quizzers"][$qq]["img"]=$Q[$qid]["img"];
+                        //$ret["teams"][$tt]["quizzers"][$qq]["name"]=$Q[$qid]["name"];
                     }
                 }
                 //$ret[]=$quiz;
                 break;
             }
         }
+        //$ret=$T;
+
         if(count($ret)){
-            $this->response(json_encode($ret),200);
+            $this->response(json_encode($ret, JSON_PRETTY_PRINT),200);
         }
     }
     private function getTeam(){
@@ -507,6 +513,45 @@ class API extends REST {
             $this->writequizdb($array);
             $this->response(1,200);
         } 
+    }
+
+    private function updateScore(){
+        if($this->get_request_method() == "OPTIONS") {
+            $this->response('',200);
+        }
+        if($this->get_request_method() != "PUT") {
+            $this->response('',406);
+        }
+
+        // Retrieve all post values that are passed
+        //$postdata = file_get_contents('php://input');
+
+        $idQuiz=$this->_request['idQuiz'];
+        $idxTeam=$this->_request['idxTeam'];
+        $idxQuizzer=$this->_request['idxQuizzer'];
+        $qpoints=$this->_request['qpoints'];
+        $qerr=$this->_request['qerr'];
+        $reset=$this->_request['reset'];
+
+        //$quizzers = $this->readdb();
+        //$teams = $this->readteamdb();
+        $quizzes = $this->readquizdb();
+
+        //$Q=$this->getAssocArrByKey($quizzers,$key="id");
+        //$T=$this->getAssocArrByKey($teams,$key="id");
+
+        $qzr=$quizzes[$idQuiz]["teams"][$idxTeam]["quizzers"][$idxQuizzer];
+        $qzr["score"]+=$qpoints;
+        $qzr["errors"]+=$qerr;
+        if($reset>0){
+            $qzr["score"]=20;
+            $qzr["errors"]=0;
+        }
+        $quizzes[$idQuiz]["teams"][$idxTeam]["quizzers"][$idxQuizzer]=$qzr;
+        
+            
+        $this->writequizdb($quizzes);
+        $this->response(1,200);
     }
 
     private function updateTeam(){

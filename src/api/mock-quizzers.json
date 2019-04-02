@@ -3,66 +3,77 @@
         "id": 11,
         "name": "Hope T",
         "program": "WGL",
-        "eventGroup": "A"
+        "eventGroup": "A",
+        "img": "hope_t.jpeg"
     },
     {
         "id": 12,
         "name": "Hope H",
         "program": "WGL",
-        "eventGroup": "A"
+        "eventGroup": "A",
+        "img": "hope_h.png"
     },
     {
         "id": 13,
         "name": "Emily D",
         "program": "WGL",
-        "eventGroup": "A"
+        "eventGroup": "A",
+        "img": "emily_d.png"
     },
     {
         "id": 14,
         "name": "Grace T",
         "program": "WGL",
-        "eventGroup": "A"
+        "eventGroup": "A",
+        "img": "grace_t.png"
     },
     {
         "id": 15,
         "name": "Aliya S",
         "program": "WGL",
-        "eventGroup": "A"
+        "eventGroup": "A",
+        "img": "aliya_s.jpeg"
     },
     {
         "id": 16,
         "name": "Harleigh B",
         "program": "WGL",
-        "eventGroup": "A"
+        "eventGroup": "A",
+        "img": "harleigh_b.png"
     },
     {
         "id": 17,
         "name": "Jeffrey P",
         "program": "WGL",
-        "eventGroup": "A"
+        "eventGroup": "A",
+        "img": "jeffrey_p.png"
     },
     {
         "id": 18,
         "name": "William S",
         "program": "WGL",
-        "eventGroup": "A"
+        "eventGroup": "A",
+        "img": "william.png"
     },
     {
         "id": 19,
         "name": "Jackson P",
         "program": "WGL",
-        "eventGroup": "A"
+        "eventGroup": "A",
+        "img": "jackson_p.png"
     },
     {
         "id": 20,
         "name": "Elijah F",
         "program": "WGL",
-        "eventGroup": "A"
+        "eventGroup": "A",
+        "img": "elijah_f.jpeg"
     },
     {
         "name": "Clinton T",
         "program": "WGL",
-        "eventGroup": "B",
-        "id": 21
+        "eventGroup": "A",
+        "id": 21,
+        "img": "clinton_t.png"
     }
 ]
