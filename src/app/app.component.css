@@ -10,15 +10,15 @@ h2 {
   padding-top: 0;
 }
 nav a {
-  padding: 5px 10px;
+  padding: 2px 10px;
   text-decoration: none;
-  margin-top: 10px;
+  margin: 2px auto;
   display: inline-block;
-  background-color: #eee;
+  background-color: #333;
   border-radius: 4px;
 }
 nav a:visited, a:link {
-  color: #607d8b;
+  color: #8bb4c9;
 }
 nav a:hover {
   color: #039be5;

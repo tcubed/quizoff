@@ -1,17 +1,17 @@
 <div *ngIf="quiz">
 
-    Quiz Date: {{quiz.date}}
-  <div class="grid grid-pad">
+  <!--Quiz Date: {{quiz.date}}
     
+  <div class="grid grid-pad">
+    -->
+  <div class="container-fluid">
+    <!--
     <a *ngFor="let team of quiz.teams" class="col-1-4">
-      <!--
-      <a *ngFor="let team of quiz.teams" class="col-1-4" routerLink="/detail/{{quiz.id}}"></a>
-      -->
+
         <div *ngFor="let quizzer of team.quizzers">
-          <!--<div class="module">-->
-          <div [ngClass]="{'module':quizzer.quizout==false,'quizout':quizzer.quizout==true,'errorout':quizzer.errorout==true}">
-
-
+          
+          <div class="module">
+            
             <h4>{{quizzer.name}}</h4>
             <img [ngClass]="{'imgquizout':(quizzer.quizout==true)||(quizzer.errorout==true)}" src="assets/img/{{quizzer.img}}">
             <div class="score">{{quizzer.score}}</div>
@@ -19,6 +19,68 @@
           </div>
         </div>
     </a>
+    -->
+  </div>
+
+
+  <div fxLayout="row wrap"
+       fxLayout.lt-sm="column"
+       fxLayoutGap="10px"
+       fxLayoutGap.lt-sm="5px"
+       fxLayoutAlign="flex-start">
+      
+    <ng-container *ngFor="let team of quiz.teams">
+      <ng-container *ngFor="let quizzer of team.quizzers">
+        <!--
+        <div class="module">
+          <h4>{{quizzer.name}}</h4>
+          <img [ngClass]="{'imgquizout':(quizzer.quizout==true)||(quizzer.errorout==true)}" src="assets/img/{{quizzer.img}}">
+          <div class="score">{{quizzer.score}}</div>
+          <div class="error" *ngIf="quizzer.errors>0">E: {{quizzer.errors}}</div>
+        </div>
+        "header header | side content | footer footer"
+        -->
+        <div
+          fxFlex="0 1 calc(25% - 10px)"
+          fxFlex.lt-md="0 1 calc(33.3% - 10px)"
+          fxFlex.lt-sm="100%"
+          >
+          <!--
+
+            gdAreas.lt-md="img | header | content | footer"
+            gdRows.lt-md="auto auto auto auto"
+          -->
+          <div 
+            gdAreas="img header | img content | img footer"
+            gdGap="5px"
+            gdColumns="100px auto"
+            [ngClass]="{'quizzer':quizzer.quizout==false,'quizout':quizzer.quizout==true,'errorout':quizzer.errorout==true}">
+            <div gdArea="header" class="header">
+              <h3>{{quizzer.name}}</h3>
+            </div>
+            <div gdArea="img" class="imgcontent">
+                <img [ngClass]="{'imgquizout':(quizzer.quizout==true)||(quizzer.errorout==true)}" src="assets/img/{{quizzer.img}}">
+            </div>
+            <div gdArea="content" class="content">
+                <h1>{{quizzer.score}}</h1>
+            </div>
+            <div gdArea="footer" class="footer">
+              <div class="error" *ngIf="quizzer.errors>0">E: {{quizzer.errors}}</div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+
   </div>
 
 </div>
+
+
+      <!--
+      <a *ngFor="let team of quiz.teams" class="col-1-4" routerLink="/detail/{{quiz.id}}"></a>
+      -->
+<!--<div class="module">-->
+            <!--
+          <div [ngClass]="{'module':quizzer.quizout==false,'quizout':quizzer.quizout==true,'errorout':quizzer.errorout==true}">
+          -->
