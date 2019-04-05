@@ -54,7 +54,10 @@
             gdAreas="img header | img content | img footer"
             gdGap="5px"
             gdColumns="100px auto"
-            [ngClass]="{'quizzer':quizzer.quizout==false,'quizout':quizzer.quizout==true,'errorout':quizzer.errorout==true}">
+            gdAreas.lt-md="img header content footer"
+            gdRows.lt-md="auto"
+            gdColumns.lt-md="15% 55% 15% 15%"
+            [ngClass]="{'quizzer':true,'quizout':quizzer.quizout==true,'errorout':quizzer.errorout==true}">
             <div gdArea="header" class="header">
               <h3>{{quizzer.name}}</h3>
             </div>

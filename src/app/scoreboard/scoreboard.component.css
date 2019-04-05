@@ -2,11 +2,6 @@
 [class*='col-'] {
     float: left;
     position: relative;
-    /*
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 20px;
-    */
     padding: 0 1% 2% 1%;
   }
   [class*='col-']:last-of-type {
@@ -33,19 +28,13 @@
     margin: 10px 5px 10px 5px;
     border-radius: 10px;
     background-color: #607d8b;
-    background-image: linear-gradient(rgb(86, 120, 123), #24536a);
+    /*background-image: linear-gradient(rgb(86, 120, 123), #24536a);*/
+    background-image: linear-gradient(rgb(155, 162, 162), #cae1ec);
   }
   .quizout {
-    padding: 0px 0px;
-    margin: 10px 5px 10px 5px;
-    border-radius: 10px;
     background-image: linear-gradient(rgb(151, 216, 158), #17df3f);
   }
   .errorout {
-    height: 120px;
-    padding: 0px 0px;
-    margin: 10px 5px 10px 5px;
-    border-radius: 10px;
     background-image: linear-gradient(rgb(216, 151, 151), #df1717);
   }
 
@@ -55,7 +44,6 @@
   .header > h3{
     white-space: nowrap;
     text-align: center;
-    margin: 0px;
     overflow: hidden;
     text-overflow: clip;
   }
@@ -64,6 +52,17 @@
     margin: 0px 0 0 0;
     height: 120px;
   }
+  img {
+    width:100px;
+    border-radius: 50%;
+    padding: 0;
+  }
+  .imgquizout{
+    clip-path: circle(50%);
+    /*filter:contrast(50%) brightness(200%);*/
+    padding: 0;
+  }
+
   .content{
     text-align: center;
   }
@@ -72,30 +71,12 @@
     position: relative;
   }
 
-  img {
-    width:100px;
-    /*position: absolute;
-    /*clip: rect(0px,100px,50px,0px);*/
-    /*clip-path: circle(40%);*/
-    border-radius: 50%;
-    
-    /*position: absolute;
-    top: -10%;
-    left: 0%;*/
-    /*top: -20px;
-    left: 0px;*/
-    /*border: 3px solid #FF0;
-    border-color: #FF0;
-    animation: myanim 1s infinite;*/
-  }
-  .imgquizout{
-    clip-path: circle(50%);
-    filter:contrast(50%) brightness(200%);
-  }
+  
 
   .score {
     font-size: 300%;
     text-align: center;
+    padding: 0;
   }
   .error {
     position: absolute;
@@ -108,67 +89,58 @@
     border: 1px solid white;
   }
 
-
-  .module {
-    padding: 20px;
-    text-align: center;
-    color: #eee;
-    /*max-height: 200px;*/
-    height: 100%;
-    /*min-width: 120px;*/
-    background-color: #607d8b;
-    background-image: linear-gradient(rgb(86, 120, 123), #24536a);
-    border-radius: 10px;
-  }
-  
-
-  .module:hover {
-    background-color: #eee;
-    cursor: pointer;
-    color: #607d8b;
-  }
-  .quizout:hover {
-    background-color: #eee;
-    cursor: pointer;
-    color: #607d8b;
-  }
-
-  
-
-  .module > h4 {
-    position: absolute;
-    left: 45%;
-    top: 50%;
-    font-size: 150%;
-    text-align: center;
-  }
-  .quizout > h4 {
-    position: absolute;
-    left: 45%;
-    top: 50%;
-    font-size: 150%;
-    text-align: center;
-  }
-
-  
-
-  /*
-  .grid {
-    margin: 0px;
-  }
-  .col-1-4 {
-    width: 25%;
-  }
-  .grid-pad {
-    padding: 20px 0;
-  }
-  .grid-pad > [class*='col-']:last-of-type {
-    padding-right: 20px;
-  }
-  */
   @media (max-width: 600px) {
     .quizzer {
-
+      margin: 1px 5px 1px 5px;
+      background-image: linear-gradient(rgb(155, 162, 162), #cae1ec);
+    }
+    .quizout {
+      background-image: linear-gradient(rgb(151, 216, 158), #17df3f);
+    }
+    .errorout {
+      background-image: linear-gradient(rgb(216, 151, 151), #df1717);
+    }
+    
+    .header{
+      padding: auto;
+      margin: auto;
+    }
+    .header > h3{
+      font-size: 120%;
+      white-space: nowrap;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: clip;
+    }
+    .imgcontent{
+      height: 50px;
+    }
+    img {
+      padding: auto;
+      height:50px;
+      width: auto;
+    }
+    .content {
+      padding: auto 0;
+      margin: auto;
+    }
+    .content > * {
+      text-align: center;
+      font-size: 150%;
+      padding: auto 0;
+      margin: auto;
+    }
+    .footer{
+     padding: auto 0;
+     margin: 0;
+    }
+    .error {
+      position: static;
+      font-size: 120%;
+      background-color: #F00;
+      margin: auto 0;
+      border-radius: 5px;
+      border: 1px solid white;
     }
   }
   @media (max-width: 1024px) {
@@ -186,3 +158,7 @@
        border-color: rgb(50, 69, 91);
     }
  }
+
+ /*border: 3px solid #FF0;
+    border-color: #FF0;
+    animation: myanim 1s infinite;*/
