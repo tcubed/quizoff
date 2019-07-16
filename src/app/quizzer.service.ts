@@ -15,7 +15,12 @@ const httpOptions = {
 @Injectable({providedIn: 'root'})
 export class QuizzerService {
   // private quizzersUrl = 'api/quizzers';  // URL to web api
-  private quizzersUrl = 'http://localhost/quizoff/quizoff-app/api';
+  // private quizzersUrl = 'http://localhost/quizoff/quizoff-app/api';
+  // private quizzersUrl = 'api';  // URL to web api
+  private quizzersUrl = 'http://localhost/api';
+  // private quizzersUrl = 'api';
+  // private quizzersUrl = ApiConfig.url;
+
 
   constructor(
     private http: HttpClient,
@@ -145,7 +150,7 @@ export class QuizzerService {
 
   /** Log a QuizzerService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`QuizzService: ${message}`);
+    this.messageService.add(`QuizzerService: ${message}`);
   }
 
   /*

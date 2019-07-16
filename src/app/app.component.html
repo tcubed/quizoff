@@ -7,15 +7,29 @@
 </div>
 -->
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" routerLink="/quizzes">{{title}}</a>
-
-    <div *ngIf="router.url !== '/scoreboard'">
-      <!--<a routerLink="/dashboard">Dashboard</a>-->
+    <div>
+      <!--<a routerLink="/dashboard">Dashboard</a>
       <a routerLink="/scoreboard">Scoreboard</a>
-
-      <a routerLink="/quizzes">QuizAdmin</a>
+-->
+      <a routerLink="/home" class="areg">Home</a>
+      <!--
       <a routerLink="/teams">TeamAdmin</a>
       <a routerLink="/quizzers">QuizzerAdmin</a>
+      -->
+    </div>
+  <h1>{{title}}</h1>
+  <!--
+    <a class="navbar-brand" routerLink="/quizzes">{{title}}</a>
+-->
+    <div *ngIf="router.url !== '/scoreboard'" >
+      <!--<a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/scoreboard">Scoreboard</a>
+-->
+      <a routerLink="/quizzes" class="ahidden">QuizAdmin</a>
+      <!--
+      <a routerLink="/teams">TeamAdmin</a>
+      <a routerLink="/quizzers">QuizzerAdmin</a>
+      -->
     </div>
 </nav>
 
@@ -27,6 +41,6 @@
 -->
 <router-outlet></router-outlet>
 
-<div *ngIf="router.url !== '/scoreboard'">
-<app-messages></app-messages>
+<div *ngIf="(router.url !== '/scoreboard') && (router.url !== '/home')">
+  <app-messages></app-messages>
 </div>

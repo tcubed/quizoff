@@ -7,6 +7,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { Quiz } from './quiz';
 import { MessageService } from './message.service';
 
+import { ApiConfig } from './apiconfig';
+
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -14,11 +16,14 @@ const httpOptions = {
 @Injectable({providedIn: 'root'})
 export class QuizService {
   // private quizsUrl = 'api/quizs';  // URL to web api
-  private quizzesUrl = 'http://localhost/quizoff/quizoff-app/api';
+  // private quizzesUrl = 'http://localhost/quizoff/quizoff-app/api';
+  private quizzesUrl = 'http://localhost/api';
+  // private quizzesUrl = 'api';
+  // private quizzesUrl = ApiConfig.url;
 
   constructor(
     private http: HttpClient,
-    private messageService: MessageService) { }
+    private messageService: MessageService) {}
 
   /** GET quizs from the server */
   getQuizzes(): Observable<Quiz[]> {

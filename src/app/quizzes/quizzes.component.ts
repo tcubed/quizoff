@@ -23,7 +23,7 @@ export class QuizzesComponent implements OnInit {
         .subscribe(quizzes => this.quizzes = quizzes);
   }
 
-  add(date: string, quizNumber: number, program: string, eventGroup: string, active: number, teams: []): void {
+  add(date: string, quizNumber: number, question: string, program: string, eventGroup: string, active: number, teams: []): void {
     /*
     "id": 1,
         "date": "4/1/2019",
@@ -34,8 +34,9 @@ export class QuizzesComponent implements OnInit {
         "teams": [1,2,3,4,5,6,7,8,9,10,11]
     */
     // name = name.trim();
+    const id = -1;
     if (!name) { return; }
-    this.quizService.addQuiz({ date, quizNumber, program, eventGroup, active, teams } as Quiz)
+    this.quizService.addQuiz({ id, date, quizNumber, question, program, eventGroup, active, teams } as Quiz)
       .subscribe(() => this.getQuizzes());
   }
 

@@ -16,6 +16,7 @@ export class Quiz {
     id: number;
     date: string;
     quizNumber: number;
+    question: string;
     program: string;
     eventGroup: string;
     active: number;

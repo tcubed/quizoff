@@ -19,9 +19,6 @@
     text-align: center;
     margin-bottom: 0;
   }
-  h4 {
-    /*position: relative;*/
-  }
   
   .quizzer {
     padding: 0px 0px;
@@ -40,6 +37,7 @@
 
   .header{
     padding: 2px;
+    width: 150px;
   }
   .header > h3{
     white-space: nowrap;
@@ -71,12 +69,19 @@
     position: relative;
   }
 
-  
+  .quizdata{
+    position: absolute;
+    right: 1em;
+    font-size: 120%;
+    top: .4rem;
+    color: #FFF;
+    font-weight: bold;
+  }
+
 
   .score {
     font-size: 300%;
     text-align: center;
-    padding: 0;
   }
   .error {
     position: absolute;
@@ -84,7 +89,7 @@
     left: -20px;
     font-size: 120%;
     background-color: #F00;
-    padding: 1% 3%;
+    padding: 2px 5px;
     border-radius: 5px;
     border: 1px solid white;
   }
@@ -100,7 +105,7 @@
     .errorout {
       background-image: linear-gradient(rgb(216, 151, 151), #df1717);
     }
-    
+
     .header{
       padding: auto;
       margin: auto;
@@ -132,7 +137,7 @@
     }
     .footer{
      padding: auto 0;
-     margin: 0;
+     margin: 0 0;
     }
     .error {
       position: static;
@@ -141,6 +146,13 @@
       margin: auto 0;
       border-radius: 5px;
       border: 1px solid white;
+    }
+    .quizdata{
+      font-size: 100%;
+      font-weight: normal;
+      top: 12px;
+      right: 10px;
+      line-height: 0.1em;
     }
   }
   @media (max-width: 1024px) {

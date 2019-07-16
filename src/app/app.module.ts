@@ -22,7 +22,8 @@ import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 
 // team
 import { TeamsComponent } from './teams/teams.component';
-
+import { HomeComponent } from './home/home.component';
+// import { ApiConfig } from './apiconfig';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { TeamsComponent } from './teams/teams.component';
     QuizDetailComponent,
     QuizzesComponent,
     TeamsComponent,
-    ScoreboardComponent
+    ScoreboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

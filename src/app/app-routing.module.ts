@@ -11,10 +11,12 @@ import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 
 import { TeamsComponent } from './teams/teams.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/scoreboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'scoreboard', component: ScoreboardComponent },
   { path: 'detail/:id', component: QuizzerDetailComponent },
   { path: 'quizzers', component: QuizzersComponent },

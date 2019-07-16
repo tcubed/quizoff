@@ -1,8 +1,50 @@
 <ul class="teams" *ngIf="quiz">
 
   <a routerLink="/scoreboard/{{quiz.id}}">
-    <span class="badge">Scoreboad for Quiz {{quiz.id}}</span>
+    <span class="badge">Scoreboard for Quiz {{quiz.id}}</span>
   </a>
+
+  <div class="quizData">
+    <div fxLayout="column"
+        fxLayoutGap="10px"
+        fxLayoutAlign="flex-start">
+      <div gdAreas="quizmeta data controls"
+        gdGap="5px"
+        gdColumns="100px auto">
+        <div gdArea="quizmeta" class="header">
+            Quiz
+        </div>
+        <div gdArea="data" class="quizValue">
+            {{quiz.quizNumber}}
+        </div>
+        <div gdArea="controls" class="controls">
+            <button class="points0" title="+1" (click)="updateQuiz((quiz.id),1)">+1</button>
+            <button class="points0" title="-1" (click)="updateQuiz((quiz.id),-1)">-1</button>
+            <button class="points0" title="reset" (click)="updateQuiz((quiz.id),0)">Reset</button>
+        </div>
+      </div>
+
+      <div gdAreas="quizmeta data controls"
+        gdGap="5px"
+        gdColumns="100px auto">
+        <div gdArea="quizmeta" class="header">
+            Question
+        </div>
+        <div gdArea="data" class="quizValue">
+            {{quiz.question}}
+        </div>
+        <div gdArea="controls" class="controls">
+            <button class="points0" title="+1" (click)="updateQuestion((quiz.id),1,'')">+1</button>
+            <button class="points0" title="-1" (click)="updateQuestion((quiz.id),-1,'')">-1</button>
+            <button class="points0" title="A" (click)="updateQuestion((quiz.id),0,'A')">A</button>
+            <button class="points0" title="B" (click)="updateQuestion((quiz.id),0,'B')">B</button>
+            <button class="points0" title="reset" (click)="updateQuestion((quiz.id),0,'reset')">Reset</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+  
 
   <li *ngFor="let team of quiz.teams; let ti = index">
 
@@ -13,7 +55,8 @@
         <li *ngFor="let quizzer of team.quizzers; let qzi = index ">
           <div class="score0">
             <span>
-              <strong>{{quizzer.name}}</strong> Score: {{quizzer.score}} Errors: {{quizzer.errors}}
+              <strong>{{quizzer.name}}</strong> Score: {{quizzer.score}} Errors: 
+              {{quizzer.errors}}
             </span>
             <button class="points0" title="+10" (click)="updateScore((quiz.id),(ti),(qzi),10,0,0)">+10</button>
             <button class="points0" title="-10" (click)="updateScore((quiz.id),(ti),(qzi),-10,0,0)">-10</button>

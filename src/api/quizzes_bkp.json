@@ -39,6 +39,21 @@
                 "name": "Hope H"
             },
             {
+                "id": 3,
+                "quizzers": [
+                    {
+                        "id": 13,
+                        "score": 20,
+                        "errors": 0,
+                        "name": "Emily D",
+                        "img": "emily_d.png",
+                        "quizout": false,
+                        "errorout": 0
+                    }
+                ],
+                "name": "Emily D"
+            },
+            {
                 "id": 4,
                 "quizzers": [
                     {
@@ -84,6 +99,21 @@
                 "name": "Harleigh B"
             },
             {
+                "id": 7,
+                "quizzers": [
+                    {
+                        "id": 17,
+                        "score": 40,
+                        "errors": 0,
+                        "name": "Jeffrey P",
+                        "img": "jeffrey_p.png",
+                        "quizout": 0,
+                        "errorout": 0
+                    }
+                ],
+                "name": "Jeffrey P"
+            },
+            {
                 "id": 8,
                 "quizzers": [
                     {
@@ -127,6 +157,21 @@
                     }
                 ],
                 "name": "Elijah F"
+            },
+            {
+                "id": 11,
+                "quizzers": [
+                    {
+                        "id": 21,
+                        "score": 20,
+                        "errors": 0,
+                        "name": "Clinton T",
+                        "img": "clinton_t.png",
+                        "quizout": 0,
+                        "errorout": 0
+                    }
+                ],
+                "name": "Clinton T"
             }
         ]
     }

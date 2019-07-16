@@ -14,7 +14,11 @@ const httpOptions = {
 @Injectable({providedIn: 'root'})
 export class TeamService {
   // private teamsUrl = 'api/teams';  // URL to web api
-  private teamsUrl = 'http://localhost/quizoff/quizoff-app/api';
+  // private teamsUrl = 'http://localhost/quizoff/quizoff-app/api';
+  // private teamsUrl = 'api';  // URL to web api
+  private teamsUrl = 'http://localhost/api';
+  // private teamsUrl = 'api';
+  // private teamsUrl = ApiConfig.url;
 
   constructor(
     private http: HttpClient,

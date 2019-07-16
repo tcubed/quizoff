@@ -4,24 +4,13 @@
     
   <div class="grid grid-pad">
     -->
-  <div class="container-fluid">
-    <!--
-    <a *ngFor="let team of quiz.teams" class="col-1-4">
-
-        <div *ngFor="let quizzer of team.quizzers">
-          
-          <div class="module">
-            
-            <h4>{{quizzer.name}}</h4>
-            <img [ngClass]="{'imgquizout':(quizzer.quizout==true)||(quizzer.errorout==true)}" src="assets/img/{{quizzer.img}}">
-            <div class="score">{{quizzer.score}}</div>
-            <div class="error" *ngIf="quizzer.errors>0">E: {{quizzer.errors}}</div>
-          </div>
-        </div>
-    </a>
-    -->
+  <div class="quizdata" fxShow fxHide.lt-sm>
+      Quiz: {{quiz.quizNumber}} | Question: {{quiz.question}}
   </div>
-
+  <div class="quizdata" fxHide fxShow.lt-sm>
+    <p>Quiz: {{quiz.quizNumber}}</p>
+    <p>Question: {{quiz.question}}</p>
+  </div>
 
   <div fxLayout="row wrap"
        fxLayout.lt-sm="column"
@@ -42,11 +31,10 @@
         -->
         <div
           fxFlex="0 1 calc(25% - 10px)"
-          fxFlex.lt-md="0 1 calc(33.3% - 10px)"
           fxFlex.lt-sm="100%"
           >
           <!--
-
+            fxFlex.lt-md="0 1 calc(33.3% - 10px)"
             gdAreas.lt-md="img | header | content | footer"
             gdRows.lt-md="auto auto auto auto"
           -->
@@ -54,9 +42,10 @@
             gdAreas="img header | img content | img footer"
             gdGap="5px"
             gdColumns="100px auto"
-            gdAreas.lt-md="img header content footer"
-            gdRows.lt-md="auto"
-            gdColumns.lt-md="15% 55% 15% 15%"
+            gdAreas.lt-sm="img header content footer"
+            gdRows.lt-sm="auto"
+            gdColumns.lt-sm="15% 55% 15% 15%"
+            
             [ngClass]="{'quizzer':true,'quizout':quizzer.quizout==true,'errorout':quizzer.errorout==true}">
             <div gdArea="header" class="header">
               <h3>{{quizzer.name}}</h3>
@@ -65,7 +54,8 @@
                 <img [ngClass]="{'imgquizout':(quizzer.quizout==true)||(quizzer.errorout==true)}" src="assets/img/{{quizzer.img}}">
             </div>
             <div gdArea="content" class="content">
-                <h1>{{quizzer.score}}</h1>
+                <!--<h1>{{quizzer.score}}</h1>-->
+                <span class="score">{{quizzer.score}}</span>
             </div>
             <div gdArea="footer" class="footer">
               <div class="error" *ngIf="quizzer.errors>0">E: {{quizzer.errors}}</div>

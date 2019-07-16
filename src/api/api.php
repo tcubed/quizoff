@@ -15,6 +15,9 @@ class API extends REST {
     const DB_PASSWORD = "WeLgbOAHU?Jl";
     const DB = "lynconne_local";       
     */
+    //private $verfull=explode('.',phpversion());
+    //const PHPVER=floatval($verfull[0].".".$verfull[1]);
+    public $PHPVER="5.2";
 
 	private $db = NULL;
 	public function __construct(){
@@ -584,6 +587,28 @@ class API extends REST {
         } 
     }
 
+    private function searchTeam(){
+        if($this->get_request_method() != "GET") {
+            $this->response('',406);
+        }
+
+        $nm=$this->_request['name'];
+        // Convert to array 
+        $array = $this->readteamdb();
+
+        $ret=array();
+        $arrlength = count($array);
+        for($x = 0; $x < $arrlength; $x++) {
+            $team=$array[$x];
+            // $tst=($user["id"]==$idUser & $user["program"]==$idProgram & $user["eventGroup"]==$idEventGroup);
+            $tst=($team["id"]==$idTeam);
+            if($tst>0){$ret[]=$team;break;}
+        }
+        if(count($ret)){
+            $this->response(json_encode($ret[0]),200);
+        }
+    }
+
     function readdb(){
         $quizzerData = file_get_contents("mock-quizzers.json");
         $array = json_decode($quizzerData, true);
@@ -622,7 +647,19 @@ class API extends REST {
         fclose($fp);
         return 1;
     }
-    
+
+
+    function readjsondb($fn){
+        $data = file_get_contents($fn);
+        $array = json_decode($data, true);
+        return $array;
+    }
+    private function writejsondb($fn,$arr){
+        $fp = fopen($fn, 'w');
+        fwrite($fp, json_encode($arr, JSON_PRETTY_PRINT));
+        fclose($fp);
+        return 1;
+    }
                 
 }
 
