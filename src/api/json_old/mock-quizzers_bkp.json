@@ -4,7 +4,7 @@
         "name": "Hope T",
         "program": "WGL",
         "eventGroup": "A",
-        "img": "hope.jpg"
+        "img": "hope_t.jpeg"
     },
     {
         "id": 12,
@@ -14,18 +14,25 @@
         "img": "hope_h.png"
     },
     {
+        "id": 13,
+        "name": "Emily D",
+        "program": "WGL",
+        "eventGroup": "A",
+        "img": "emily_d.png"
+    },
+    {
         "id": 14,
         "name": "Grace T",
         "program": "WGL",
         "eventGroup": "A",
-        "img": "grace.jpg"
+        "img": "grace_t.png"
     },
     {
         "id": 15,
         "name": "Aliya S",
         "program": "WGL",
         "eventGroup": "A",
-        "img": "aliya.jpg"
+        "img": "aliya_s.jpeg"
     },
     {
         "id": 16,
@@ -33,6 +40,13 @@
         "program": "WGL",
         "eventGroup": "A",
         "img": "harleigh_b.png"
+    },
+    {
+        "id": 17,
+        "name": "Jeffrey P",
+        "program": "WGL",
+        "eventGroup": "A",
+        "img": "jeffrey_p.png"
     },
     {
         "id": 18,
@@ -53,34 +67,13 @@
         "name": "Elijah F",
         "program": "WGL",
         "eventGroup": "A",
-        "img": "elijah.jpg"
+        "img": "elijah_f.jpeg"
     },
     {
-        "id": 22,
-        "name": "Mercy T",
+        "name": "Clinton T",
         "program": "WGL",
         "eventGroup": "A",
-        "img": "mercy.jpg"
-    },
-    {
-        "id": 23,
-        "name": "Anika M",
-        "program": "WGL",
-        "eventGroup": "A",
-        "img": "anika.jpg"
-    },
-    {
-        "id": 24,
-        "name": "Jack H",
-        "program": "WGL",
-        "eventGroup": "A",
-        "img": "jack.jpg"
-    },
-    {
-        "id": 25,
-        "name": "Job G",
-        "program": "WGL",
-        "eventGroup": "A",
-        "img": "job_2.jpg"
+        "id": 21,
+        "img": "clinton_t.png"
     }
 ]

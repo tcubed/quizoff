@@ -133,27 +133,12 @@
     {
         "id": 2,
         "date": "5\/1\/2021",
-        "quizNumber": 1,
+        "quizNumber": 2,
         "question": "1",
         "program": "WGL",
         "eventGroup": "A",
         "active": 1,
         "teams": [
-            {
-                "id": 1,
-                "quizzers": [
-                    {
-                        "id": 11,
-                        "score": 40,
-                        "errors": 0,
-                        "name": "Hope T",
-                        "img": "hope.jpg",
-                        "errorout": false,
-                        "quizout": false
-                    }
-                ],
-                "name": "Hope T"
-            },
             {
                 "id": 4,
                 "quizzers": [
@@ -161,13 +146,13 @@
                         "id": 14,
                         "score": 20,
                         "errors": 0,
-                        "name": "Grace T",
-                        "img": "grace.jpg",
+                        "name": "Aliya S",
+                        "img": "aliya_s.jpeg",
                         "quizout": 0,
                         "errorout": 0
                     }
                 ],
-                "name": "Grace T"
+                "name": "Aliya S"
             },
             {
                 "id": 13,
@@ -192,7 +177,7 @@
                         "score": 20,
                         "errors": 0,
                         "name": "Elijah F",
-                        "img": "elijah.jpg",
+                        "img": "elijah_f.jpeg",
                         "quizout": 0,
                         "errorout": 0
                     }
@@ -206,15 +191,29 @@
                         "id": 15,
                         "score": 20,
                         "errors": 0,
-                        "name": "Aliya S",
-                        "img": "aliya.jpg",
+                        "name": "Grace T",
+                        "img": "grace_t.png",
                         "quizout": 0,
                         "errorout": 0
                     }
                 ],
-                "name": "Aliya S"
+                "name": "Grace T"
             },
-            
+            {
+                "id": 1,
+                "quizzers": [
+                    {
+                        "id": 11,
+                        "score": 40,
+                        "errors": 0,
+                        "name": "Hope T",
+                        "img": "hope_t.jpeg",
+                        "errorout": false,
+                        "quizout": false
+                    }
+                ],
+                "name": "Hope T"
+            },
             {
                 "id": 14,
                 "quizzers": [
@@ -223,7 +222,7 @@
                         "score": 20,
                         "errors": 0,
                         "name": "Jack H",
-                        "img": "jack.jpg",
+                        "img": "grace_t.png",
                         "quizout": 0,
                         "errorout": 0
                     }
@@ -238,7 +237,7 @@
                         "score": 20,
                         "errors": 0,
                         "name": "Job G",
-                        "img": "job.jpg",
+                        "img": "grace_t.png",
                         "quizout": false,
                         "errorout": false
                     }
@@ -253,7 +252,7 @@
                         "score": 20,
                         "errors": 0,
                         "name": "Mercy T",
-                        "img": "mercy.jpg",
+                        "img": "grace_t.png",
                         "quizout": 0,
                         "errorout": 0
                     }

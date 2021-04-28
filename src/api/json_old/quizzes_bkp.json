@@ -39,6 +39,21 @@
                 "name": "Hope H"
             },
             {
+                "id": 3,
+                "quizzers": [
+                    {
+                        "id": 13,
+                        "score": 20,
+                        "errors": 0,
+                        "name": "Emily D",
+                        "img": "emily_d.png",
+                        "quizout": false,
+                        "errorout": 0
+                    }
+                ],
+                "name": "Emily D"
+            },
+            {
                 "id": 4,
                 "quizzers": [
                     {
@@ -84,6 +99,21 @@
                 "name": "Harleigh B"
             },
             {
+                "id": 7,
+                "quizzers": [
+                    {
+                        "id": 17,
+                        "score": 40,
+                        "errors": 0,
+                        "name": "Jeffrey P",
+                        "img": "jeffrey_p.png",
+                        "quizout": 0,
+                        "errorout": 0
+                    }
+                ],
+                "name": "Jeffrey P"
+            },
+            {
                 "id": 8,
                 "quizzers": [
                     {
@@ -127,138 +157,21 @@
                     }
                 ],
                 "name": "Elijah F"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "date": "5\/1\/2021",
-        "quizNumber": 1,
-        "question": "1",
-        "program": "WGL",
-        "eventGroup": "A",
-        "active": 1,
-        "teams": [
-            {
-                "id": 1,
-                "quizzers": [
-                    {
-                        "id": 11,
-                        "score": 40,
-                        "errors": 0,
-                        "name": "Hope T",
-                        "img": "hope.jpg",
-                        "errorout": false,
-                        "quizout": false
-                    }
-                ],
-                "name": "Hope T"
             },
             {
-                "id": 4,
+                "id": 11,
                 "quizzers": [
                     {
-                        "id": 14,
+                        "id": 21,
                         "score": 20,
                         "errors": 0,
-                        "name": "Grace T",
-                        "img": "grace.jpg",
+                        "name": "Clinton T",
+                        "img": "clinton_t.png",
                         "quizout": 0,
                         "errorout": 0
                     }
                 ],
-                "name": "Grace T"
-            },
-            {
-                "id": 13,
-                "quizzers": [
-                    {
-                        "id": 23,
-                        "score": 20,
-                        "errors": 0,
-                        "name": "Anika M",
-                        "img": "grace_t.png",
-                        "quizout": 0,
-                        "errorout": 0
-                    }
-                ],
-                "name": "Anika M"
-            },
-            {
-                "id": 10,
-                "quizzers": [
-                    {
-                        "id": 20,
-                        "score": 20,
-                        "errors": 0,
-                        "name": "Elijah F",
-                        "img": "elijah.jpg",
-                        "quizout": 0,
-                        "errorout": 0
-                    }
-                ],
-                "name": "Elijah F"
-            },
-            {
-                "id": 5,
-                "quizzers": [
-                    {
-                        "id": 15,
-                        "score": 20,
-                        "errors": 0,
-                        "name": "Aliya S",
-                        "img": "aliya.jpg",
-                        "quizout": 0,
-                        "errorout": 0
-                    }
-                ],
-                "name": "Aliya S"
-            },
-            
-            {
-                "id": 14,
-                "quizzers": [
-                    {
-                        "id": 24,
-                        "score": 20,
-                        "errors": 0,
-                        "name": "Jack H",
-                        "img": "jack.jpg",
-                        "quizout": 0,
-                        "errorout": 0
-                    }
-                ],
-                "name": "Jack H"
-            },
-            {
-                "id": 15,
-                "quizzers": [
-                    {
-                        "id": 25,
-                        "score": 20,
-                        "errors": 0,
-                        "name": "Job G",
-                        "img": "job.jpg",
-                        "quizout": false,
-                        "errorout": false
-                    }
-                ],
-                "name": "Job G"
-            },
-            {
-                "id": 12,
-                "quizzers": [
-                    {
-                        "id": 22,
-                        "score": 20,
-                        "errors": 0,
-                        "name": "Mercy T",
-                        "img": "mercy.jpg",
-                        "quizout": 0,
-                        "errorout": 0
-                    }
-                ],
-                "name": "Mercy T"
+                "name": "Clinton T"
             }
         ]
     }

@@ -4,6 +4,7 @@
     # Set the headers for the restful api
     
     #Header always set Access-Control-Allow-Origin http://localhost:4200
+    #Header always set Access-Control-Allow-Origin http://localhost
     #Header "HTTP/1.1 200 OK"
     Header always set Access-Control-Allow-Origin *
     Header always set Access-Control-Max-Age "1000"

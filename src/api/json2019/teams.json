@@ -86,37 +86,5 @@
         "active":1,
         "id": 11,
         "quizzers":[21]
-    },
-    {
-        "name": "Mercy T",
-        "program": "WGL",
-        "eventGroup": "A",
-        "active":1,
-        "id": 12,
-        "quizzers":[22]
-    },
-    {
-        "name": "Anika M",
-        "program": "WGL",
-        "eventGroup": "A",
-        "active":1,
-        "id": 13,
-        "quizzers":[23]
-    },
-    {
-        "name": "Jack H",
-        "program": "WGL",
-        "eventGroup": "A",
-        "active":1,
-        "id": 14,
-        "quizzers":[24]
-    },
-    {
-        "name": "Job G",
-        "program": "WGL",
-        "eventGroup": "A",
-        "active":1,
-        "id": 15,
-        "quizzers":[25]
     }
 ]

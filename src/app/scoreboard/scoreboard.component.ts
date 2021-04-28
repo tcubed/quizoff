@@ -25,7 +25,7 @@ export class ScoreboardComponent implements OnInit {
   }
 
   getQuiz(): void {
-    const id = 1; // +this.route.snapshot.paramMap.get('id');
+    const id = 2; // +this.route.snapshot.paramMap.get('id');
     this.quizService.getQuiz(id)
         .subscribe(quiz => this.quiz = quiz);
   }

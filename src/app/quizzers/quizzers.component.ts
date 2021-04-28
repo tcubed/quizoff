@@ -32,6 +32,7 @@ export class QuizzersComponent implements OnInit {
   }
   */
   getQuizzers(): void {
+    console.log('get quizzers!');
     this.quizzerService.getQuizzers()
         .subscribe(quizzers => this.quizzers = quizzers);
   }

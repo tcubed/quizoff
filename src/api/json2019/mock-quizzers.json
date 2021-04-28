@@ -4,7 +4,7 @@
         "name": "Hope T",
         "program": "WGL",
         "eventGroup": "A",
-        "img": "hope.jpg"
+        "img": "hope_t.jpeg"
     },
     {
         "id": 12,
@@ -18,14 +18,14 @@
         "name": "Grace T",
         "program": "WGL",
         "eventGroup": "A",
-        "img": "grace.jpg"
+        "img": "grace_t.png"
     },
     {
         "id": 15,
         "name": "Aliya S",
         "program": "WGL",
         "eventGroup": "A",
-        "img": "aliya.jpg"
+        "img": "aliya_s.jpeg"
     },
     {
         "id": 16,
@@ -53,34 +53,6 @@
         "name": "Elijah F",
         "program": "WGL",
         "eventGroup": "A",
-        "img": "elijah.jpg"
-    },
-    {
-        "id": 22,
-        "name": "Mercy T",
-        "program": "WGL",
-        "eventGroup": "A",
-        "img": "mercy.jpg"
-    },
-    {
-        "id": 23,
-        "name": "Anika M",
-        "program": "WGL",
-        "eventGroup": "A",
-        "img": "anika.jpg"
-    },
-    {
-        "id": 24,
-        "name": "Jack H",
-        "program": "WGL",
-        "eventGroup": "A",
-        "img": "jack.jpg"
-    },
-    {
-        "id": 25,
-        "name": "Job G",
-        "program": "WGL",
-        "eventGroup": "A",
-        "img": "job_2.jpg"
+        "img": "elijah_f.jpeg"
     }
 ]

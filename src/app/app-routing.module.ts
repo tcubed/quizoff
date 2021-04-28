@@ -18,12 +18,12 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'home', component: HomeComponent },
   { path: 'scoreboard', component: ScoreboardComponent },
-  { path: 'detail/:id', component: QuizzerDetailComponent },
-  { path: 'quizzers', component: QuizzersComponent },
   { path: 'scoring', component: QuizDetailComponent },
   { path: 'quizzes', component: QuizzesComponent },
-  { path: 'quiz/:id', component: QuizDetailComponent },
-  { path: 'teams', component: TeamsComponent }
+  { path: 'teams', component: TeamsComponent },
+  { path: 'quizzers', component: QuizzersComponent },
+  { path: 'detail/:id', component: QuizzerDetailComponent },
+  { path: 'quiz/:id', component: QuizDetailComponent }
 ];
 
 @NgModule({

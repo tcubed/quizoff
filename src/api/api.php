@@ -160,6 +160,8 @@ class API extends REST {
         
     private function getQuizzers(){
         // Get the contents of the JSON file 
+        //echo "getQuizzers!yo!";
+        //return;
         $quizzerData = file_get_contents("mock-quizzers.json");
         $this->response($quizzerData,200);
     }

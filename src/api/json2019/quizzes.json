@@ -1,0 +1,133 @@
+[
+    {
+        "id": 1,
+        "date": "4\/1\/2019",
+        "quizNumber": 1,
+        "question": "1",
+        "program": "WGL",
+        "eventGroup": "A",
+        "active": 1,
+        "teams": [
+            {
+                "id": 1,
+                "quizzers": [
+                    {
+                        "id": 11,
+                        "score": 20,
+                        "errors": 0,
+                        "name": "Hope T",
+                        "img": "hope_t.jpeg",
+                        "errorout": true,
+                        "quizout": false
+                    }
+                ],
+                "name": "Hope T"
+            },
+            {
+                "id": 2,
+                "quizzers": [
+                    {
+                        "id": 12,
+                        "score": 20,
+                        "errors": 0,
+                        "name": "Hope H",
+                        "img": "hope_h.png",
+                        "quizout": false,
+                        "errorout": false
+                    }
+                ],
+                "name": "Hope H"
+            },
+            {
+                "id": 4,
+                "quizzers": [
+                    {
+                        "id": 14,
+                        "score": 20,
+                        "errors": 0,
+                        "name": "Grace T",
+                        "img": "grace_t.png",
+                        "quizout": false,
+                        "errorout": false
+                    }
+                ],
+                "name": "Grace T"
+            },
+            {
+                "id": 5,
+                "quizzers": [
+                    {
+                        "id": 15,
+                        "score": 200,
+                        "errors": 0,
+                        "name": "Aliya S",
+                        "img": "aliya_s.jpeg",
+                        "quizout": false,
+                        "errorout": 0
+                    }
+                ],
+                "name": "Aliya S"
+            },
+            {
+                "id": 6,
+                "quizzers": [
+                    {
+                        "id": 16,
+                        "score": 80,
+                        "errors": 0,
+                        "name": "Harleigh B",
+                        "img": "harleigh_b.png",
+                        "quizout": 0,
+                        "errorout": 0
+                    }
+                ],
+                "name": "Harleigh B"
+            },
+            {
+                "id": 8,
+                "quizzers": [
+                    {
+                        "id": 18,
+                        "score": 200,
+                        "errors": 0,
+                        "name": "William S",
+                        "img": "william.png",
+                        "quizout": false,
+                        "errorout": 0
+                    }
+                ],
+                "name": "William S"
+            },
+            {
+                "id": 9,
+                "quizzers": [
+                    {
+                        "id": 19,
+                        "score": 110,
+                        "errors": 0,
+                        "name": "Jackson P",
+                        "img": "jackson_p.png",
+                        "quizout": false,
+                        "errorout": false
+                    }
+                ],
+                "name": "Jackson P"
+            },
+            {
+                "id": 10,
+                "quizzers": [
+                    {
+                        "id": 20,
+                        "score": 200,
+                        "errors": 0,
+                        "name": "Elijah F",
+                        "img": "elijah_f.jpeg",
+                        "quizout": false,
+                        "errorout": false
+                    }
+                ],
+                "name": "Elijah F"
+            }
+        ]
+    }
+]
