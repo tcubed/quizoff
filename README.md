@@ -25,15 +25,21 @@ The quiz-off consists of the following modifications:
 
 Configured quizzes are shown on the quiz selection page.  Selecting one will bring the scorekeeper to the scoring page for that quiz.
 
-<img src="/src/assets/doc/quizzes.png" alt="scoreboard"/>
+<img src="/src/assets/doc/quizzes.png" alt="quizzes"/>
 
 ## Scoring Page
 
 The scoring page is shown below.  The quiz and question numbers can be changed +/- or reset back to 1.  Although A & B questions are supported, we don't currently use them given the rules above.  Individual quizzer score and errors are shown for each quizzer.  Checkboxes for quiz-out and error-out toggle the green and red background, respectively.
 
-<img src="/src/assets/doc/score_enter.png" alt="scoreboard"/>
+<img src="/src/assets/doc/score_enter.png" alt="score entering"/>
 
 All scores are kept on the server.
+
+## Mobile support
+
+The scoring page works fine on a mobile device.  The scoreboard can also be viewed on a mobile device.
+
+<img src="/src/assets/doc/scoreboard_mobile.png" alt="scoreboard_mobile"/>
 
 ## Details
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.  It began as a trial project to learn Angular.
