@@ -1,34 +1,30 @@
 # QuizoffApp
 
-This is an "quiz off" application consisting, primarily, of a scoreboard for monitor or projection screen and a scorekeeping page.
+This is an "quiz off" application meant for individual competition of Christian & Missionary Alliance (CMA) Bible Quizzing for the selection of the international team.  Although originally developed given the quiz-off rules used by the Western Great Lakes District (WGLD), it's possibly to use it in different configurations.
 
+The primary (current) use is as a scoreboard, seen below, on a monitor or projection screen, together with a scorekeeping page.
+
+<img src="/src/assets/doc/scoreboard.png" alt="scoreboard"/>
+
+Important features include:
+
+ - Individual pictures, names, score
+ - Quiz-out shown with a green background.
+ - Errors shown on the card, and error-outs as a red background.
+
+## WGLD Quiz-off Rules
+
+The quiz-off consists of the following modifications:
+
+ - The quiz consists of up to 10 quizzers and 20 "numbered" questions.
+ - Each error is -10 points and the quizzer sits out the next question.  At 3 errors, the quizzer is out for the remainder of that quiz.
+ - Quizzers continue to quiz in successive quizzes until they accumulate a total of 200 points.  The first 5 quizzers to make it to 200 points will be the Internationals team.  This may mean 6+ quizzes must take place until the 5 spots have been filled.
+
+## Scoring Page
+
+The scoring page is shown below.
+
+<img src="/src/assets/doc/scoreboard.png" alt="scoreboard"/>
+
+## Details
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
-
-## Scoreboard
-
-<img src="/assets/doc/scoreboard.png" alt="question grouping"/>
-
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
