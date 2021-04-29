@@ -1,6 +1,13 @@
 # QuizoffApp
 
+This is an "quiz off" application consisting, primarily, of a scoreboard for monitor or projection screen and a scorekeeping page.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
+
+## Scoreboard
+
+<img src="/assets/doc/scoreboard.png" alt="question grouping"/>
+
 
 ## Development server
 
