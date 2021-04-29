@@ -8,7 +8,7 @@ The primary (current) use is as a scoreboard, seen below, on a monitor or projec
 
 Important features include:
 
- - Current quiz and question number are shown in the upper left.
+ - Current quiz and question number are shown in the upper right.
  - Individual pictures, names, score
  - Quiz-out shown with a green background.
  - Errors shown on the card, and error-outs as a red background.
