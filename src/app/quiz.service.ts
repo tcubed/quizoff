@@ -17,8 +17,8 @@ const httpOptions = {
 export class QuizService {
   // private quizsUrl = 'api/quizs';  // URL to web api
   // private quizzesUrl = 'http://localhost/quizoff/quizoff-app/api';
-  private quizzesUrl = 'http://localhost/api';
-  // private quizzesUrl = 'api';
+  //private quizzesUrl = 'http://localhost/api';
+  private quizzesUrl = 'api';
   // private quizzesUrl = ApiConfig.url;
 
   constructor(
